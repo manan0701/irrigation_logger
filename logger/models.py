@@ -17,7 +17,7 @@ class Farms(models.Model):
 
 
 class Accounts(models.Model):
-    PAYMENT_METHOD_CHOICES = [('cash', 'cash'), ('e-money transfer', 'e-money transfer')]
+    PAYMENT_METHOD_CHOICES = [('cash', 'cash'), ('e-money_transfer', 'e-money transfer')]
 
     customer = models.ForeignKey(Customers, on_delete=models.CASCADE, null=False, blank=False)
     date = models.DateField(default=date.today(), blank=False, editable=True)
